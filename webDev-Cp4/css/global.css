@@ -6,6 +6,23 @@ body {
   padding: 0;
 }
 
+.page-banner {
+  background: linear-gradient(90deg, #1b4332, #2d6a4f);
+  color: white;
+  padding: 2.5rem 0;
+}
+
+.page-banner h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.page-banner p {
+  opacity: 0.85;
+  margin: 0;
+}
+
 .navbar {
   background: linear-gradient(90deg, #1b4332, #2d6a4f);
 }
