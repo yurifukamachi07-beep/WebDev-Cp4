@@ -1,0 +1,36 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+}
+
+.contact-info-box,
+.contact-form-box {
+  padding: 28px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #1b4332;
+  font-weight: 500;
+}
+
+.contact-item i {
+  width: 22px;
+  color: #2d6a4f;
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  border: 1px solid #b7d3c0;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 0.2rem rgba(45, 106, 79, 0.2);
+}
