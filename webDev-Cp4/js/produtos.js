@@ -1,17 +1,7 @@
-// ============================================================
-//  produtos.js — Carregamento e Renderização de Produtos
-//  Funcionalidades:
-//    - Lê produtos de um arquivo JSON via fetch (async/await)
-//    - Renderiza os cards dinamicamente no DOM
-//    - Conecta os botões "Adicionar ao Carrinho"
-// ============================================================
-
-// ── 1. Carrega os produtos do JSON (Promise / async-await) ──
 async function carregarProdutos(containerId, caminhoJson) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  // Feedback de carregamento enquanto o fetch acontece
   container.innerHTML = `
     <div class="text-center py-4 w-100">
       <div class="spinner-border text-success" role="status"></div>
@@ -19,7 +9,6 @@ async function carregarProdutos(containerId, caminhoJson) {
     </div>`;
 
   try {
-    // fetch retorna uma Promise — await espera ela resolver
     const resposta = await fetch(caminhoJson);
 
     if (!resposta.ok) {
@@ -28,7 +17,7 @@ async function carregarProdutos(containerId, caminhoJson) {
 
     const produtos = await resposta.json();
     renderizarProdutos(produtos, container);
-    return produtos; // Retorna para uso externo (ex: filtros)
+    return produtos;
 
   } catch (erro) {
     console.error(erro);
@@ -40,7 +29,6 @@ async function carregarProdutos(containerId, caminhoJson) {
   }
 }
 
-// ── 2. Monta os cards de produto no DOM ──
 function renderizarProdutos(produtos, container) {
   if (produtos.length === 0) {
     container.innerHTML = `
@@ -71,7 +59,6 @@ function renderizarProdutos(produtos, container) {
     </div>
   `).join('');
 
-  // Conecta os botões de adicionar ao carrinho
   container.querySelectorAll('.btn-adicionar').forEach(btn => {
     btn.addEventListener('click', () => {
       const produto = JSON.parse(btn.dataset.produto);
@@ -80,7 +67,6 @@ function renderizarProdutos(produtos, container) {
   });
 }
 
-// ── 3. Formata a categoria para exibição ──
 function formatarCategoria(categoria) {
   const mapa = {
     camisetas: 'Camisetas',

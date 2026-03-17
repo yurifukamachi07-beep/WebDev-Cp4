@@ -1,29 +1,15 @@
-// ============================================================
-//  carrinho.js — Lógica do Carrinho de Compras
-//  Funcionalidades:
-//    - Adicionar/remover produtos
-//    - Persistência com localStorage
-//    - Sidebar dinâmica com total
-//    - Toast de feedback ao usuário
-// ============================================================
-
-// ── 1. Estado inicial: carrega do localStorage ou começa vazio ──
 let carrinho = JSON.parse(localStorage.getItem('ecogeek_carrinho')) || [];
 
-// ── 2. Salva o carrinho no localStorage ──
 function salvarCarrinho() {
   localStorage.setItem('ecogeek_carrinho', JSON.stringify(carrinho));
 }
 
-// ── 3. Adiciona produto ao carrinho ──
 function adicionarAoCarrinho(produto) {
   const itemExistente = carrinho.find(item => item.id === produto.id);
 
   if (itemExistente) {
-    // Se já existe, apenas aumenta a quantidade
     itemExistente.quantidade += 1;
   } else {
-    // Novo item com quantidade 1
     carrinho.push({ ...produto, quantidade: 1 });
   }
 
@@ -33,7 +19,6 @@ function adicionarAoCarrinho(produto) {
   mostrarToast(`"${produto.nome}" adicionado ao carrinho!`);
 }
 
-// ── 4. Remove produto do carrinho ──
 function removerDoCarrinho(id) {
   carrinho = carrinho.filter(item => item.id !== id);
   salvarCarrinho();
@@ -41,7 +26,6 @@ function removerDoCarrinho(id) {
   renderizarSidebar();
 }
 
-// ── 5. Atualiza o contador (badge) no ícone do carrinho ──
 function atualizarContadorCarrinho() {
   const total = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
   const badges = document.querySelectorAll('.cart-badge');
@@ -51,7 +35,6 @@ function atualizarContadorCarrinho() {
   });
 }
 
-// ── 6. Renderiza os itens dentro da sidebar ──
 function renderizarSidebar() {
   const lista = document.getElementById('sidebar-lista');
   const totalEl = document.getElementById('sidebar-total');
@@ -89,7 +72,6 @@ function renderizarSidebar() {
   totalEl.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
 }
 
-// ── 7. Altera quantidade de um item ──
 function alterarQuantidade(id, delta) {
   const item = carrinho.find(i => i.id === id);
   if (!item) return;
@@ -102,7 +84,6 @@ function alterarQuantidade(id, delta) {
   renderizarSidebar();
 }
 
-// ── 8. Abre/fecha a sidebar ──
 function toggleSidebar() {
   const sidebar = document.getElementById('carrinho-sidebar');
   const overlay = document.getElementById('carrinho-overlay');
@@ -111,7 +92,6 @@ function toggleSidebar() {
   overlay.classList.toggle('visivel');
 }
 
-// ── 9. Toast de feedback assíncrono (usa Promise) ──
 function mostrarToast(mensagem) {
   return new Promise(resolve => {
     const container = document.getElementById('toast-container');
@@ -135,7 +115,6 @@ function mostrarToast(mensagem) {
   });
 }
 
-// ── 10. Injeta o HTML da sidebar + overlay + toast na página ──
 function injetarSidebar() {
   const html = `
     <!-- Overlay escuro atrás da sidebar -->
@@ -170,7 +149,7 @@ function injetarSidebar() {
 
   document.body.insertAdjacentHTML('beforeend', html);
 
-  // Conecta todos os ícones do carrinho para abrir a sidebar
+
   document.querySelectorAll('.cart-icon').forEach(icon => {
     icon.addEventListener('click', e => {
       e.preventDefault();
@@ -186,7 +165,7 @@ function injetarSidebar() {
   });
 }
 
-// ── 11. Limpa o carrinho após finalizar compra ──
+
 function limparCarrinho() {
   carrinho = [];
   salvarCarrinho();
@@ -195,7 +174,7 @@ function limparCarrinho() {
   toggleSidebar();
 }
 
-// ── 12. Inicialização ──
+
 document.addEventListener('DOMContentLoaded', () => {
   injetarSidebar();
   atualizarContadorCarrinho();

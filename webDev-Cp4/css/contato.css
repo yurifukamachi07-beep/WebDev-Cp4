@@ -1,4 +1,3 @@
-/*CONTATO*/
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -24,7 +23,6 @@
   color: #2d6a4f;
 }
 
-/*FORMULÁRIOS*/
 .form-control,
 .form-select {
   border-radius: 12px;

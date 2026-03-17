@@ -1,4 +1,3 @@
-/*FILTROS*/
 .filters-box {
   background-color: white;
   border-radius: 18px;
@@ -27,7 +26,6 @@
   margin-bottom: 24px;
 }
 
-/*PAGINAÇÃO*/
 .page-link {
   color: #2d6a4f;
 }

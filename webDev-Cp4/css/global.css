@@ -6,7 +6,6 @@ body {
   padding: 0;
 }
 
-/*NAVBAR*/
 .navbar {
   background: linear-gradient(90deg, #1b4332, #2d6a4f);
 }
@@ -21,7 +20,7 @@ body {
   color: #b7e4c7;
 }
 
-/*TEXTOS E TÍTULOS*/
+
 .section-title {
   font-weight: 800;
   color: #1b4332;
@@ -37,7 +36,7 @@ body {
   color: #555;
 }
 
-/*BOTÕES*/
+
 .btn-eco {
   background-color: #2d6a4f;
   color: white;
@@ -63,7 +62,7 @@ body {
   color: white;
 }
 
-/*FOOTER*/
+
 footer {
   background-color: #1b4332;
   color: white;
@@ -78,8 +77,6 @@ footer a:hover {
   color: white;
 }
 
-/*PRODUTOS / GRID*/
-/* GRID DE PRODUTOS */
 
 .products-grid {
   display: grid;
@@ -87,7 +84,6 @@ footer a:hover {
   gap: 24px;
 }
 
-/* CARD DO PRODUTO */
 
 .product-card {
   background: white;
@@ -105,7 +101,6 @@ footer a:hover {
   transform: translateY(-6px);
 }
 
-/* IMAGEM */
 
 .product-card img {
   width: 100%;
@@ -134,7 +129,7 @@ footer a:hover {
   display: flex;
   justify-content: center;
 }
-/* ÁREA DE INFORMAÇÕES */
+
 
 .product-info {
   padding: 20px;
@@ -145,7 +140,6 @@ footer a:hover {
   flex: 1;
 }
 
-/* BADGE ECO */
 
 .badge-eco {
   background: #d8f3dc;
@@ -157,7 +151,6 @@ footer a:hover {
   width: fit-content;
 }
 
-/* TITULO */
 
 .product-title {
   font-weight: 700;
@@ -165,7 +158,6 @@ footer a:hover {
   font-size: 1.1rem;
 }
 
-/* DESCRIÇÃO */
 
 .product-info p {
   font-size: 0.9rem;
@@ -175,7 +167,6 @@ footer a:hover {
   overflow: hidden;
 }
 
-/* PREÇO */
 
 .product-price {
   font-weight: 700;
@@ -184,13 +175,11 @@ footer a:hover {
   margin-top: auto;
 }
 
-/* BOTÃO */
 
 .product-info button {
   margin-top: 10px;
 }
 
-/* RESPONSIVIDADE */
 
 @media (max-width: 992px) {
   .products-grid {
