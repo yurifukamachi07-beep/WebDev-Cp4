@@ -48,13 +48,13 @@ frontcp4/
 │   ├── categoria.css
 │   ├── produto.css
 │   ├── contato.css
-│   └── carrinho.css        ← novo (CP04)
+│   └── carrinho.css 
 ├── js/
-│   ├── carrinho.js         ← novo (CP04)
-│   ├── produtos.js         ← novo (CP04)
-│   └── filtros.js          ← novo (CP04)
+│   ├── carrinho.js 
+│   ├── produtos.js    
+│   └── filtros.js          
 ├── data/
-│   └── produtos.json       ← novo (CP04)
+│   └── produtos.json      
 └── img/
 ```
 =
