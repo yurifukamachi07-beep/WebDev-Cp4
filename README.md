@@ -3,7 +3,8 @@
 E-commerce de moda geek sustentável com funcionalidades JavaScript implementadas para o CP04.
 
 ## Grupo
-> Indique os nomes dos integrantes aqui
+Yuri Fukamachi 567314
+Michel Benchimol 567345
 
 ## Tecnologias
 - HTML5, CSS3, Bootstrap 5.3
@@ -56,6 +57,4 @@ frontcp4/
 │   └── produtos.json       ← novo (CP04)
 └── img/
 ```
-
-## Como rodar
-Abra o `index.html` em um servidor local (ex: Live Server no VS Code) para que o `fetch()` funcione corretamente.
+=
