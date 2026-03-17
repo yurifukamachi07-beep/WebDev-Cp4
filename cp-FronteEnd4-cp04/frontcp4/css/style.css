@@ -1,0 +1,46 @@
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 20px;
+  border-radius: 16px;
+  display: inline-block;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(0.75);
+}
+
+.category-box {
+  background-color: white;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  height: 100%;
+}
+
+.category-box:hover {
+  transform: translateY(-5px);
+}
+
+.highlight {
+  background: linear-gradient(135deg, #d8f3dc, #edf6f0);
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+
+.page-banner {
+  background: linear-gradient(rgba(27, 67, 50, 0.80), rgba(45, 106, 79, 0.80));
+  color: white;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
