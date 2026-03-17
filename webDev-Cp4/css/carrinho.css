@@ -213,7 +213,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  line-height: 2;
+  
 }
 
 /* ── Toasts ── */
@@ -248,7 +249,7 @@
   transform: translateY(0);
 }
 
-/* ── Animação de entrada dos cards ── */
+/* ── Animação de erada dos cards ── */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
