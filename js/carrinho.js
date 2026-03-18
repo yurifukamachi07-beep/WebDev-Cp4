@@ -31,7 +31,7 @@ function atualizarContadorCarrinho() {
   const badges = document.querySelectorAll('.cart-badge');
   badges.forEach(badge => {
     badge.textContent = total;
-    badge.style.display = total > 0 ? 'inline-block' : 'none';
+    badge.style.display = total > 0 ? 'flex' : 'none';
   });
 }
 
